@@ -1,0 +1,320 @@
+<!DOCTYPE HTML>
+<html size="s">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+	<title>远程交付管理</title>
+	<link rel="stylesheet" href="../TouchUI/css/base.css" rel="stylesheet" type="text/css"/>
+	<link rel="stylesheet" href="../css/project.css" rel="stylesheet" type="text/css"/>
+	<script src="../TouchUI/js/jcl-base.js"></script>
+	<script src="../TouchUI/js/jcl.js"></script>
+	<script src="../TouchUI/js/jcl-plugins.js"></script>
+	<script src="../TouchUI/js/jcl-ui.js"></script>
+	<script src="../TouchUI/js/local.js"></script>
+	<script src="../TouchUI/js/ui/component/base/popup.js"></script>
+	<script src="../TouchUI/js/ui/component/tabset/tabset.js"></script>
+</head>
+<body>
+	<!-- 标题栏 开始 -->
+	<div class="c_header">
+		<div class="back" ontap="back();">部门工作安排</div>
+		<div class="fn">
+			<button class="e_button-blue" type="button"  id="UI-edit" ontap=""><span class="e_ico-edit"></span></button>
+		</div>
+	</div>
+	<!-- 标题栏 结束 -->
+	<div class="c_scroll c_scroll-float c_scroll-header c_scroll-white">
+		<div class="l_padding">
+			<!-- 列表 开始 -->
+			<div class="c_list">
+				<ul>
+					<li>
+						<div class="pic "><span class="e_ico e_ico-pic-red e_ico-pic-r">平</span></div>
+						<div class="main">
+							<div class="title">平台组</div>
+							<div class="content">部门经理：廖盛</div>
+						</div>
+						<div class="side"><div class="e_tag">
+							<span class="e_tagText">12人</span>
+						</div></div>
+					</li>
+				</ul>
+			</div>
+			<!-- 列表 结束 -->
+			<div class="c_space"></div>
+			<div class="c_line"></div>
+			<div class="c_space"></div>
+			<!-- 分列 开始 -->
+			<div class="l_col">
+				<div class="l_colItem">
+					<span class="e_space"></span> 
+					<span class="e_select">2018年1月</span>
+				</div>
+				<div class="l_colItem e_right">
+					<!-- 列表 开始 -->
+					<div class="c_list">
+						<ul>
+							<li>
+								<div class="main">
+									<div class="content">(1日~5日)</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+					<!-- 列表 结束 -->
+					<span class="e_space-2"></span> 
+				</div>
+			</div>
+			<!-- 分列 结束 -->
+			<div class="c_tab c_tab-level-2" id="UI-tab">
+				<div class="tab">
+					<div class="list">
+						<ul></ul>
+					</div>
+				</div>
+				<div class="page">
+					<div class="content" title="第1周">
+						<div class="c_scroll c_scroll-white">
+							<!-- 列表 开始 -->
+							<div class="c_list">
+								<ul>
+									<li class="link" ontap="goto('details_p.html')">
+										<div class="content">
+											<div class="pic"></div>
+											<div class="main">
+												<div class="title e_strong">远程交付管理</div>
+											</div>
+										</div>
+									</li>
+								</ul>
+							</div>
+							<!-- 列表 结束 -->
+							<!-- 列表 开始 -->
+							<div class="c_list c_list-v c_list-col-3">
+								<ul>
+									<li class="link" ontap="goto('details_p.html')">
+										<div class="pic"><span class="e_pic-img-r e_pic-img-r-c"><img src="../temp/male.png" alt="" /></span></div>
+										<div class="main">
+											<div class="title">廖盛</div>
+										</div>
+									</li>
+									<li class="link" ontap="goto('details_p.html')">
+										<div class="pic"><span class="e_pic-img-r e_pic-img-r-c"><img src="../temp/male.png" alt="" /></span></div>
+										<div class="main">
+											<div class="title">何啸</div>
+										</div>
+									</li>
+									<li class="link" ontap="goto('details_p.html')">
+										<div class="pic"><span class="e_pic-img-r e_pic-img-r-c"><img src="../temp/male.png" alt="" /></span></div>
+										<div class="main">
+											<div class="title">夏茂盛</div>
+										</div>
+									</li>
+									<li class="link" ontap="goto('details_p.html')">
+										<div class="pic"><span class="e_pic-img-r e_pic-img-r-c"><img src="../temp/male.png" alt="" /></span></div>
+										<div class="main">
+											<div class="title">彭巍</div>
+										</div>
+									</li>
+									<li class="link" ontap="goto('details_p.html')">
+										<div class="pic"><span class="e_pic-img-r e_pic-img-r-c"><img src="../temp/female.png" alt="" /></span></div>
+										<div class="main">
+											<div class="title">佘邓芳</div>
+										</div>
+									</li>
+								</ul>
+							</div>
+							<!-- 列表 结束 -->
+							<div class="c_line c_line-dashed"></div>
+							<!-- 列表 开始 -->
+							<div class="c_list">
+								<ul>
+
+									<li class="link" ontap="goto('details_p.html')">
+										<div class="content">
+											<div class="pic"></div>
+											<div class="main">
+												<div class="title e_strong">知识库</div>
+											</div>
+										</div>
+									</li>
+								</ul>
+							</div>
+							<!-- 列表 开始 -->
+							<!-- 列表 开始 -->
+							<div class="c_list c_list-v c_list-col-3">
+								<ul>
+									<li class="link" ontap="goto('details_p.html')">
+										<div class="pic"><span class="e_pic-img-r e_pic-img-r-c"><img src="../temp/male.png" alt="" /></span></div>
+										<div class="main">
+											<div class="title">江明健</div>
+										</div>
+									</li>
+									<li class="link" ontap="goto('details_p.html')">
+										<div class="pic"><span class="e_pic-img-r e_pic-img-r-c"><img src="../temp/male.png" alt="" /></span></div>
+										<div class="main">
+											<div class="title">谢冬星</div>
+										</div>
+									</li>
+									<li class="link" ontap="goto('details_p.html')">
+										<div class="pic"><span class="e_pic-img-r e_pic-img-r-c"><img src="../temp/male.png" alt="" /></span></div>
+										<div class="main">
+											<div class="title">何啸</div>
+										</div>
+									</li>
+									<li class="link" ontap="goto('details_p.html')">
+										<div class="pic"><span class="e_pic-img-r e_pic-img-r-c"><img src="../temp/female.png" alt="" /></span></div>
+										<div class="main">
+											<div class="title">佘邓芳</div>
+										</div>
+									</li>
+								</ul>
+							</div>
+							<!-- 列表 结束 -->
+							<div class="c_line c_line-dashed"></div>
+							<!-- 列表 开始 -->
+							<div class="c_list">
+								<ul>
+
+									<li class="link" ontap="goto('details_p.html')">
+										<div class="content">
+											<div class="pic"></div>
+											<div class="main">
+												<div class="title e_strong">crm运维监控平台</div>
+											</div>
+										</div>
+									</li>
+								</ul>
+							</div>
+							<!-- 列表 开始 -->
+							<!-- 列表 开始 -->
+							<div class="c_list c_list-v c_list-col-3">
+								<ul>
+									<li class="link" ontap="goto('details_p.html')">
+										<div class="pic"><span class="e_pic-img-r e_pic-img-r-c"><img src="../temp/male.png" alt="" /></span></div>
+										<div class="main">
+											<div class="title">周麟</div>
+										</div>
+									</li>
+									<li class="link" ontap="goto('details_p.html')">
+										<div class="pic"><span class="e_pic-img-r e_pic-img-r-c"><img src="../temp/male.png" alt="" /></span></div>
+										<div class="main">
+											<div class="title">伍友健</div>
+										</div>
+									</li>
+									<li class="link" ontap="goto('details_p.html')">
+										<div class="pic"><span class="e_pic-img-r e_pic-img-r-c"><img src="../temp/male.png" alt="" /></span></div>
+										<div class="main">
+											<div class="title">张益涛</div>
+										</div>
+									</li>
+									<li class="link" ontap="goto('details_p.html')">
+										<div class="pic"><span class="e_pic-img-r e_pic-img-r-c"><img src="../temp/male.png" alt="" /></span></div>
+										<div class="main">
+											<div class="title">吴佳侣</div>
+										</div>
+									</li>
+								</ul>
+							</div>
+							<!-- 列表 结束 -->
+							<!-- 列表 结束 -->
+							<div class="c_line c_line-dashed"></div>
+							<div class="c_list">
+								<ul>
+									<li class="link" ontap="goto('details_p.html')">
+										<div class="content">
+											<div class="pic"></div>
+											<div class="main">
+												<div class="title e_strong">其他</div>
+											</div>
+										</div>
+									</li>
+								</ul>
+							</div>
+							<!-- 列表 开始 -->
+							<!-- 列表 开始 -->
+							<div class="c_list c_list-v c_list-col-3">
+								<ul>
+									<li class="link" ontap="goto('details_p.html')">
+										<div class="pic"><span class="e_pic-img-r e_pic-img-r-c"><img src="../temp/male.png" alt="" /></span></div>
+										<div class="main">
+											<div class="title">王臻</div>
+										</div>
+									</li>
+								</ul>
+							</div>
+							<!-- 列表 开始 -->
+							<div class="c_line c_line-dashed"></div>
+							<!-- 列表 开始 -->
+							<div class="c_list">
+								<ul>
+									<li class="link" ontap="goto('details_p.html')">
+										<div class="content">
+											<div class="pic"></div>
+											<div class="main">
+												<div class="title e_strong">Touch-UI立项</div>
+											</div>
+											<div class="side"><div class="e_tag">研发</div></div>
+										</div>
+									</li>
+								</ul>
+							</div>
+							<!-- 列表 开始 -->
+							<!-- 列表 开始 -->
+							<div class="c_list c_list-v c_list-col-3">
+								<ul>
+									<li class="link" ontap="goto('details_p.html')">
+										<div class="pic"><span class="e_pic-img-r e_pic-img-r-c"><img src="../temp/male.png" alt="" /></span></div>
+										<div class="main">
+											<div class="title">廖盛</div>
+										</div>
+									</li>
+									<li class="link" ontap="goto('details_p.html')">
+										<div class="pic"><span class="e_pic-img-r e_pic-img-r-c"><img src="../temp/male.png" alt="" /></span></div>
+										<div class="main">
+											<div class="title">何啸</div>
+										</div>
+									</li>
+									<li class="link" ontap="goto('details_p.html')">
+										<div class="pic"><span class="e_pic-img-r e_pic-img-r-c"><img src="../temp/male.png" alt="" /></span></div>
+										<div class="main">
+											<div class="title">谢冬星</div>
+										</div>
+									</li>
+								</ul>
+							</div>
+							<div class="c_space"></div>
+						</div>
+					</div>
+					<div class="content" title="第2周">
+						<div class="c_scroll c_scroll-white">
+							2
+						</div>
+					</div>
+					<div class="content" title="第3周">
+						<div class="c_scroll c_scroll-white">
+							3
+						</div>
+					</div>
+					<div class="content" title="第4周">
+						<div class="c_scroll c_scroll-white">
+							4
+						</div>
+					</div>
+					<div class="content" title="第5周">
+						<div class="c_scroll c_scroll-white">
+							5
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script>
+		Wade.setRatio();
+		window["UI-tab"] = new Wade.Tabset("UI-tab");
+	</script>
+
+</body>
+</html>

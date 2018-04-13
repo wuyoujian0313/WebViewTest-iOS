@@ -1,0 +1,91 @@
+<!DOCTYPE HTML>
+<html size="s">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+	<title>远程交付管理</title>
+	<link rel="stylesheet" href="../TouchUI/css/base.css" rel="stylesheet" type="text/css"/>
+	<link rel="stylesheet" href="../css/project.css" rel="stylesheet" type="text/css"/>
+	<script src="../TouchUI/js/jcl-base.js"></script>
+	<script src="../TouchUI/js/jcl.js"></script>
+	<script src="../TouchUI/js/jcl-plugins.js"></script>
+	<script src="../TouchUI/js/jcl-ui.js"></script>
+	<script src="../TouchUI/js/local.js"></script>
+</head>
+<body>
+	<!-- 标题栏 开始 -->
+	<div class="c_header">
+		<div class="back" ontap="back();">研发详情</div>
+		<div class="fn">
+			<button class="e_button-blue" type="button" ><span class="e_ico-delete"></span></button>
+			<button class="e_button-blue" type="button" ontap="goto('add-d.html')"><span class="e_ico-edit"></span></button>
+		</div>
+	</div>
+	<!-- 标题栏 结束 -->
+	<!-- 滚动（替换为 java 组件） 开始 -->
+	<div class="c_scroll c_scroll-float c_scroll-header c_scroll-white">
+		<!-- 列表 开始 -->
+		<div class="c_list">
+			<ul>
+				<li>
+					<div class="main">
+						<div class="title title-auto e_size-l" ontap="goto('wiki_list.html')"><span class="e_strong e_purple">Touch-UI立项</span><span class="e_space"></span><span class="e_ico-wiki e_size-xs e_purple"></span></div>
+						<div class="content">所处节点：实施阶段</div>
+						<div class="content content-auto">描述：公司p0立项</div>
+					</div>
+					<div class="side">
+						<div class="e_tag e_tag-orange">
+							<span class="e_tagText">80%</span>
+						</div>
+					</div>
+					<!-- 启动了 就显示完成了百分之多少-->
+				</li>
+			</ul>
+		</div>
+		<!-- 列表 结束 -->
+		<div class="l_padding">
+			<div class="c_box c_box-border">
+				<div class="l_padding">
+					<img src="../temp/gt.png" alt="" />
+					这里放里程碑甘特图<br/>
+					里程碑（时间节点）
+				</div>
+			</div>
+			<!-- 列表 开始 -->
+			<div class="c_space"></div>
+			<!-- 列表 开始 -->
+			<div class="c_list">
+				<ul>
+					<li>
+						<div class="pic"><span class="e_ico-file e_ico-pic"></span></div>
+						<div class="main">
+							<div class="title e_strong">准备资料</div>
+							<div class="content">2018-01-01 ~ 2018-01-15</div>
+							<div class="content content-auto">廖盛，何啸，谢冬星，江明建</div>
+							<div class="content content-auto">资料收集基本完成，功能架构图还需要完善</div>
+						</div>
+					</li>
+					<li>
+						<div class="pic"><span class="e_ico-file e_ico-pic"></span></div>
+						<div class="main">
+							<div class="title e_strong">实施阶段</div>
+							<div class="content">2018-1-15 ~ 2018-02-02</div>
+							<div class="content">廖盛，何啸</div>
+							<div class="content content-auto">发生了戏剧性转变，从p1到了p0</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<!-- 列表 结束 -->
+
+		</div>
+	</div>
+	<!-- 滚动 结束 -->
+
+
+	<script>
+		Wade.setRatio();
+	</script>
+
+</body>
+</html>

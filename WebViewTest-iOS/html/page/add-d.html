@@ -1,0 +1,204 @@
+<!DOCTYPE HTML>
+<html size="s">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+	<title>远程交付管理</title>
+	<link rel="stylesheet" href="../TouchUI/css/base.css" rel="stylesheet" type="text/css"/>
+	<link rel="stylesheet" href="../css/project.css" rel="stylesheet" type="text/css"/>
+	<script src="../TouchUI/js/jcl-base.js"></script>
+	<script src="../TouchUI/js/jcl.js"></script>
+	<script src="../TouchUI/js/jcl-plugins.js"></script>
+	<script src="../TouchUI/js/jcl-ui.js"></script>
+	<script src="../TouchUI/js/local.js"></script>
+	<script src="../TouchUI/js/ui/component/base/popup.js"></script>
+	<script src="../TouchUI/js/ui/component/base/segment.js"></script>
+</head>
+<body>
+
+	<!-- 标题栏 开始 -->
+	<div class="c_header">
+		<div class="back" ontap="back();">备忘录</div>
+	</div>
+	<!-- 标题栏 结束 -->
+	<!-- 滚动（替换为 java 组件） 开始 -->
+	<div class="c_scroll c_scroll-float c_scroll-header">
+		<div class="l_padding">
+			<div id="UI-other">
+				<!-- 表单 开始 -->
+				<div class="c_list c_list-line c_list-border">
+					<ul>
+
+						<li class="link required">
+							<div class="label">标题</div>
+							<div class="value"><input type="text" /></div>
+						</li>
+						<li class="link required">
+							<div class="label">参与人</div>
+							<div class="value"><span class="e_mix" ontap="showPopup('UI-popup','UI-popup-query')">
+								<input type="text"  value="谢冬星" />
+								<span class="e_ico-check"></span>
+							</span></div>
+						</li>
+						<li class="link required">
+							<div class="label">开始时间</div>
+							<div class="value"><span class="e_mix">
+								<input type="text" />
+								<span class="e_ico-date"></span>
+							</span></div>
+						</li>
+						<li class="link required">
+							<div class="label">结束时间</div>
+							<div class="value"><span class="e_mix">
+								<input type="text" />
+								<span class="e_ico-date"></span>
+							</span></div>
+						</li>
+						<li class="link">
+							<div class="label">定时提醒</div>
+							<div class="value"><span class="e_mix">
+								<input type="text" />
+								<span class="e_ico-date"></span>
+							</span></div>
+						</li>
+						<li class="link">
+							<div class="label">收件人</div>
+							<div class="value"><input type="text" /></div>
+						</li>
+					</ul>
+				</div>
+				<!-- 表单 结束 -->
+			</div>
+			<div class="c_space"></div>
+			<!-- 提交 开始 -->
+			<div class="c_submit c_submit-full">
+				<button type="button" class="e_button-r e_button-l e_button-green" ontap="goto('../home.html')">提交</button>
+			</div>
+			<!-- 提交 结束 -->
+			<div class="c_space"></div>
+			
+		</div>
+	</div>
+	<!-- 滚动 结束 -->
+	<!-- 弹窗 开始 -->
+	<div class="c_popup" id="UI-popup">
+		<div class="c_popupBg" id="UI-popup_bg"></div>
+		<div class="c_popupBox">
+			<div class="c_popupWrapper" id="UI-popup_wrapper">
+				<div class="c_popupGroup">
+					<div class="c_popupItem" id="UI-popup-query">
+						<div class="c_header">
+							<div class="back" ontap="hidePopup(this)">参与人</div>
+						</div>
+						<!-- <div class="c_box c_box-blue l_padding l_padding-u">
+							<span class="e_mix e_mix-r" style="width:100%;">
+								<input type="text"  placeholder="姓名" />
+								<span class="e_ico-search"></span>
+							</span>
+						</div> -->
+						<!-- 滚动（替换为 java 组件） 开始 -->
+						<div class="c_scroll c_scroll-float c_scroll-header c_scroll-submit">
+							<!-- 列表 开始 -->
+							<div class="c_list c_list-line c_list-s">
+								<ul>
+									<li>
+										<div class="main">
+											<div class="title">廖盛</div>
+										</div>
+										<div class="fn"><input type="checkbox" /></div>
+									</li>
+									<li>
+										<div class="main">
+											<div class="title">周麟</div>
+										</div>
+										<div class="fn"><input type="checkbox" /></div>
+									</li>
+									<li>
+										<div class="main">
+											<div class="title">何啸</div>
+										</div>
+										<div class="fn"><input type="checkbox" /></div>
+									</li>
+									<li>
+										<div class="main">
+											<div class="title">谢冬星</div>
+										</div>
+										<div class="fn"><input type="checkbox" /></div>
+									</li>
+									<li>
+										<div class="main">
+											<div class="title">江明建</div>
+										</div>
+										<div class="fn"><input type="checkbox" /></div>
+									</li>
+									<li>
+										<div class="main">
+											<div class="title">伍友健</div>
+										</div>
+										<div class="fn"><input type="checkbox" /></div>
+									</li>
+									<li>
+										<div class="main">
+											<div class="title">佘邓芳</div>
+										</div>
+										<div class="fn"><input type="checkbox" /></div>
+									</li>
+									<li>
+										<div class="main">
+											<div class="title">张益涛</div>
+										</div>
+										<div class="fn"><input type="checkbox" /></div>
+									</li>
+									<li>
+										<div class="main">
+											<div class="title">夏茂盛</div>
+										</div>
+										<div class="fn"><input type="checkbox" /></div>
+									</li>
+									<li>
+										<div class="main">
+											<div class="title">彭巍</div>
+										</div>
+										<div class="fn"><input type="checkbox" /></div>
+									</li>
+									<li>
+										<div class="main">
+											<div class="title">王臻</div>
+										</div>
+										<div class="fn"><input type="checkbox" /></div>
+									</li>
+								</ul>
+							</div>
+							<!-- 列表 结束 -->
+							<div class="c_line"></div>
+						</div>
+						<!-- 滚动 结束 -->
+						<div class="l_bottom">
+							<!-- 提交 开始 -->
+							<div class="c_submit c_submit-full">
+								<button type="button" class="e_button-l e_button-purple" ontap="hidePopup(this)">确定</button>
+							</div>
+							<!-- 提交 结束 -->
+						</div>
+						<!-- 部门经理置顶 默认是组长 -->
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<!-- 弹窗 结束 -->
+	
+	<script>
+		Wade.setRatio();
+
+		window["mySegment"] = new Wade.Segment("mySegment",{
+			disabled:false
+		});
+		$("#mySegment").val("0");
+
+		window["UI-popup"] = new Wade.Popup("UI-popup");
+	</script>
+
+</body>
+</html>

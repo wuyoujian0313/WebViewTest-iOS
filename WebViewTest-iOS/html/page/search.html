@@ -1,0 +1,37 @@
+<!DOCTYPE HTML>
+<html size="s">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+	<title>远程交付管理</title>
+	<link rel="stylesheet" href="../TouchUI/css/base.css" rel="stylesheet" type="text/css"/>
+	<link rel="stylesheet" href="../css/project.css" rel="stylesheet" type="text/css"/>
+	<script src="../TouchUI/js/jcl-base.js"></script>
+	<script src="../TouchUI/js/jcl.js"></script>
+	<script src="../TouchUI/js/jcl-plugins.js"></script>
+	<script src="../TouchUI/js/jcl-ui.js"></script>
+	<script src="../TouchUI/js/local.js"></script>
+	<script src="../TouchUI/js/ui/component/base/popup.js"></script>
+</head>
+<body>
+
+	<div class="c_header">
+		<div class="back" ontap="back();">查询</div>
+		<!-- <div class="fn"><button type="button" class="e_button-blue" ontap="showPopup('UI-popup','UI-popup-query')"><span class="e_ico-more"></span></button></div> -->
+	</div>
+	<div class="c_box c_box-blue l_padding l_padding-u">
+		<span class="e_mix e_mix-r" style="width:100%;">
+			<input type="text"  value="湖南" />
+			<span class="e_ico-search e_ico-purple"></span>
+		</span>
+	</div>
+	<div class="c_scroll c_scroll-white c_scroll-float c_scroll-header c_scroll-search">
+		
+	</div>
+	<script>
+		Wade.setRatio();
+		window["UI-popup"] = new Wade.Popup("UI-popup");
+	</script>
+
+</body>
+</html>

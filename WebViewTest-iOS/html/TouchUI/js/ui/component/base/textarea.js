@@ -1,0 +1,7 @@
+/*!
+ * textarea component
+ * http://www.wadecn.com/
+ * auth:xiedx@asiainfo.com
+ * Copyright 2015, WADE
+ */
+!function(e,t,i){"use strict";if(e&&"undefined"==typeof e.TextArea){var n=i.createElement("input"),a="oninput"in n;n=null;var l=/[\[\]\{\}"\/\\]+/,d=/[\[\]\{\}"\/\\]*/g,s=function(){return""==this.value||!l.test(""+this.value)||(this.value=(""+this.value).replace(d,""),!1)},r=function(t,n){var a=this;a.el=t&&1==t.nodeType?t:i.getElementById(t),a.el&&a.el.nodeType&&(a.id=e.attr(a.el,"id"))&&(n&&e.isObject(n)&&e.extend(a,n),e.attr(a.el,"x-wade-uicomponent")||e.attr(a.el,"x-wade-uicomponent","textarea"),a._init(),a.constructor.call(a))};r.prototype=e.extend(new e.UIComponent,{getDisabled:function(){var e=this;return e.disabled},setDisabled:function(t){var i=this;i.el&&i.el.nodeType&&(i.disabled=!!t,i.el.disabled=i.disabled,setTimeout(function(){var t=i.el.className?i.el.className:"";i.disabled?(" "+t+" ").indexOf(" e_dis ")<0&&(i.el.className=e.trim(t+" e_dis")):(t=e.trim((" "+t+" ").replace(/ e_dis /gi," ")),i.el.className=t)},0))},destroy:function(){var e=this;e.el=null},_init:function(){var t=this;t.disabled&&t.setDisabled(!0),a?e(t.el).bind("input",s):e(t.el).bind("keyup",s)}}),t.TextArea=e.TextArea=r}}(window.Wade,window,document);
