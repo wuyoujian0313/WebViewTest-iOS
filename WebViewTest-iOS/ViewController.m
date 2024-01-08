@@ -7,9 +7,11 @@
 //
 
 #import "ViewController.h"
+#import <WebKit/WebKit.h>
 
-@interface ViewController ()<UIWebViewDelegate>
-@property (nonatomic,strong) UIWebView *contentWebView;
+
+@interface ViewController ()
+@property (nonatomic,strong) WKWebView  *wkWebView;
 @end
 
 @implementation ViewController
@@ -18,57 +20,25 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     [self layoutWebView];
-    [self webViewLoadData];
 }
 
 - (void)layoutWebView {
+    WKWebViewConfiguration *config = [[WKWebViewConfiguration alloc] init];
+    //通过默认的构造器来创建对象
+    WKWebView *wkWebView = [[WKWebView alloc] initWithFrame:self.view.bounds configuration:config];
+    self.wkWebView = wkWebView;
+    [self.view addSubview:wkWebView];
     
-    NSHTTPCookieStorage *sharedHTTPCookieStorage = [NSHTTPCookieStorage sharedHTTPCookieStorage];
-    NSArray *cookies=[sharedHTTPCookieStorage cookies];
-    NSEnumerator *enumerator = [cookies objectEnumerator];
-    NSHTTPCookie *cookie;
-    while (cookie = [enumerator nextObject]) {
-        [sharedHTTPCookieStorage deleteCookie:cookie];
-    }
-    [[NSURLCache sharedURLCache] removeAllCachedResponses];
-    
-    if (!_contentWebView) {
-        _contentWebView = [[UIWebView alloc] initWithFrame:self.view.bounds];
-        _contentWebView.delegate = self;
-        [self.view addSubview:_contentWebView];
-        
-        [_contentWebView setScalesPageToFit:NO];
-        [_contentWebView.scrollView setBounces:NO];
-    }
-}
-
-- (void)webViewLoadData {
     NSBundle *mainBundle = [NSBundle mainBundle];
-    NSURL *url = [NSURL URLWithString:[mainBundle pathForResource:@"department-test1" ofType:@"html" inDirectory:@"html/page"]];
+    NSURL *url = [NSURL fileURLWithPath:[mainBundle pathForResource:@"index" ofType:@"html" inDirectory:@"html"]];
     NSURLRequest *request = [NSURLRequest requestWithURL:url cachePolicy:NSURLRequestReloadIgnoringCacheData timeoutInterval:30.0];
-    [_contentWebView loadRequest:request];
+    [_wkWebView loadRequest:request];
 }
 
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
-}
-
-
-#pragma mark - UIWebViewDelegate
-
-- (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType {
-    return YES;
-}
-
-- (void)webViewDidStartLoad:(UIWebView *)webView {
-}
-
-- (void)webViewDidFinishLoad:(UIWebView *)webView {
-}
-
-- (void)webView:(UIWebView *)webView didFailLoadWithError:( NSError *)error {
 }
 
 
